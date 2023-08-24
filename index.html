@@ -1,0 +1,637 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for PASCal">
+      
+      
+      
+      
+      
+        <link rel="next" href="LICENSE/">
+      
+      
+      <link rel="icon" href="src/PASCal/static/PASCal_icon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.3">
+    
+    
+      
+        <title>PASCal</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.0e669242.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quick-start" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="PASCal" class="md-header__button md-logo" aria-label="PASCal" data-md-component="logo">
+      
+  <img src="src/PASCal/static/PASCal_icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PASCal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MJCliffe/PASCal" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MJCliffe/PASCal
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="PASCal" class="md-nav__button md-logo" aria-label="PASCal" data-md-component="logo">
+      
+  <img src="src/PASCal/static/PASCal_icon.png" alt="logo">
+
+    </a>
+    PASCal
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MJCliffe/PASCal" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MJCliffe/PASCal
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+    <nav class="md-nav" aria-label="Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    Summary Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plots" class="md-nav__link">
+    Plots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fitting" class="md-nav__link">
+    Fitting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strain-calculation" class="md-nav__link">
+    Strain calculation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-installation" class="md-nav__link">
+    Offline Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues-and-feature-requests" class="md-nav__link">
+    Issues and Feature Requests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-useful-software" class="md-nav__link">
+    Other Useful Software
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CONTRIBUTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to PASCal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api_reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+    <nav class="md-nav" aria-label="Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    Summary Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plots" class="md-nav__link">
+    Plots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fitting" class="md-nav__link">
+    Fitting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strain-calculation" class="md-nav__link">
+    Strain calculation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-installation" class="md-nav__link">
+    Offline Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues-and-feature-requests" class="md-nav__link">
+    Issues and Feature Requests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-useful-software" class="md-nav__link">
+    Other Useful Software
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div align="center" style="padding-bottom: 1em;">
+<img width="300px" align="center" src="./src/PASCal/static/images/PASCal_logo_v1.png">
+</div>
+
+<p>Principal Axis Strain Calculator (PASCal) is a web tool designed to help scientists analyse non-ambient lattice parameter data. It is written entirely in Python, using plotly to visualise the data, and as a web tool the code is designed to be used online, though it can be used offline with a local flask instance or by adapting the code for your own applications. The web tool is available at <a href="https://pascal-notts.azurewebsites.net">pascal-notts.azurewebsites.net</a>, the code at <a href="https://github.com/MJCliffe/PASCal">MJCliffe/PASCal</a> on GitHub.</p>
+<p>A paper summarising the original motivation and theory behind PASCal is published at <a href="https://doi.org/10.1107/S0021889812043026">J. Appl. Cryst. (2012). 45, 1321-1329</a> (<a href="http://arxiv.org/pdf/1204.3007.pdf">arXiv</a>). Please cite this if you use PASCal in a publication. This publication was produced for a previous version of PASCal and so description of the software itself is out of date. PASCal is designed might not be the most appropriate method for full analysis of your data, so please read the sections below on <a href="#errors">errors</a>, <a href="#fitting">fitting</a> and <a href="#strain-calculation">strains</a> if you have particular needs.</p>
+<h1 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h1>
+<p>PASCal takes experimentally determined lattice parameters measured as a function of a parameter (temperature, pressure or state of charge), then calculates the strain matrix, diagonalises this matrix to find the principal strains, and then carries out fits to simple functions to get summary metrics. 
+Paste your data in, click calculate and see the results! 
+There are helpful tips on hover, but more detailed information is below.</p>
+<h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
+<p>Data should be input as plain text, with eight values per row, the control parameter <span class="arithmatex">\(X\)</span>, its error <span class="arithmatex">\(\sigma(X)\)</span> and the lattice parameters (in Å and degrees <span class="arithmatex">\(^\circ\)</span>): <span class="arithmatex">\((a, b, c, \alpha, \beta, \gamma)\)</span>.</p>
+<p>Lines beginning with "#" are treated as comments and ignored: <code># This line is metadata</code>.</p>
+<p>There are a number of other options:
+- Data type: whether the data vary with temperature, pressure or electrochemical state-of-charge.
+This does not alter how the principal strains are calculated, but rather the fits (and units) that are carried out.
+- For pressure data, whether this is a high pressure phase, and if so at what critical pressure it undergoes the transition.
+- For electrochemical data, the maximum degree of Chebyshev polynomial to use to fit the lattice parameter and volume data.
+- Advanced strain options, Eulerian strain and finite/infinitesimal strain.
+This determines which strain formalism is used to calculate the strain.</p>
+<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
+<h3 id="summary-table">Summary Table<a class="headerlink" href="#summary-table" title="Permanent link">&para;</a></h3>
+<p>The summary table shows the three principal axes (in crystallographic coordinates [UVW]) and the coefficient of thermal expansion/compressibility/electrochemical strain derivative along each of these directions with the errors (see <a href="#errors">below</a> for details). The coefficients are determined through fitting: using the linear fit for temperature, empirical fit for pressure and the Chebyshev fit for electrochemical strain. The principal axis shown is for the median data point, with the full list below.</p>
+<h3 id="plots">Plots<a class="headerlink" href="#plots" title="Permanent link">&para;</a></h3>
+<p>Below the summary tables are the key plots. These interactive plots are generated using plotly. A high resolution png can be saved using the camera button. Any given data series can be hidden by clicking on its symbol in the key and the plot. The raw data for each plot is shown in tables below (including the fitted values) if you wish to replot using different software. The indicatrix is a plot of the expansivity/compressibility tensor, showing its value along each direction. Positive values are blue, negative values are red and exact values can be measured using mouseover.</p>
+<p>Available plots are (by supported data type, T, P and X):</p>
+<ol>
+<li>Principal strains as a function of parameter with fit (TPX)</li>
+<li>Derivative of fitted strain as a function of parameter (PX)</li>
+<li>Volume (TPX)</li>
+<li>Fit as a function of degree of polynomial (X)</li>
+<li>Indicatrix (TPX)</li>
+</ol>
+<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
+<p>The raw data plotted in the plots is shown in the tables at the bottom of the page (data type):</p>
+<ol>
+<li>Principal strains with fitted strain value (TPX).</li>
+<li>Principal strain axes (TPX). The axes are also used to assign the eigenstrains to a particular direction (1,2 or 3). This is a difference from the original version of PASCal which just sorted by the magnitude of the strain. The directions are insensitive to inversion and are shown with the largest component positive.</li>
+<li>Calculated derivative of the strain with parameter (PX).</li>
+<li>Volume with fitted volume (TPX).</li>
+<li>Parsed input values (TPX). These allow you to check the values have been read correctly in the event of anomalous results.</li>
+</ol>
+<h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
+<p>PASCal does not use uncertainties in cell parameters or volumes in its fitting or strain calculations, and instead only uses errors in the control parameter, <span class="arithmatex">\(x\)</span>. The uncertainties in <span class="arithmatex">\(x\)</span> are used as weights for both linear and non-linear fitting but are not directly propagated through to the final parameter uncertainties. This usually provides a reasonable approximation as typically the inherent scatter of the strain is the primary source of uncertainty in the fitted parameter. In the case that the data has very small errors, this method will overestimate the magnitude of the errors. It can also prove inaccurate for small data sets.</p>
+<p>If you have the magnitudes of the errors on your lattice parameters, it is possible to propagate those errors through to get more accurate estimates, and <a href="#other-useful-software">some software packages</a> (e.g. WINStrain) can give you errors on strains from errors on lattice parameters. However, to get very accurate estimates of errors it is also necessary to include the covariance of lattice parameters, and for low symmetry systems, the propagation of errors in lattice parameter angles to strain errors is a problem with no unique solution. 
+Additionally, since the errors that are calculated from Rietveld fits or single crystal calculations often seem to underestimate the true errors in lattice parameters, these will underestimate the true error in your calculated values if used naively (see <a href="https://doi.org/10.1107/S0021889809024376">Haestier, J Appl. Cryst 2009, 42, 798</a>, <a href="https://doi.org/10.1107/S010876810000269X">Herbstein, Acta Cryst B 2000, 56, 547</a>; <a href="https://doi.org/10.1107/S0108768186098506">Taylor, R. &amp; Kennard, O. Acta Cryst B 1986, 42, 112.</a>)</p>
+<p>In PASCal, linear fits use White’s heteroscedascity consistent error estimates and non-linear fits use the residuals to calculate the error estimates.</p>
+<h2 id="fitting">Fitting<a class="headerlink" href="#fitting" title="Permanent link">&para;</a></h2>
+<p>PASCal as an automated fitting tool cannot guarantee always finding the best fit and it is worth considering whether another <a href="#other-useful-software">software package</a> to carry out these kind of calculation if they wish to examine this data more finely. There are some specific issues that users should consider, especially for high pressure data sets:</p>
+<ul>
+<li>PASCal does not use cell-parameter or volume errors in fitting or strain calculation, which can skew results. The contribution of volume errors to final errors is discussed in Angel (<a href="https://doi.org/10.1515/9781501508707-020">Reviews in Mineralogy and Geochemistry, Vol. 41, High-Temperature and High Pressure Crystal Chemistry 2000</a>).</li>
+<li>Fitting to non-linear equations of state can be unstable, especially if the equation of state does not describe the behaviour well. Even where this instability occurs, it does not often seem to perturb the fitted parameters too badly. The errors, being derived from the derivatives of the parameters, are much more susceptible to instabilities and failure to converge. As the input errors (as currently implemented) are just weights, multiplying the errors by a constant can sometimes nudge the model towards convergence.</li>
+<li>Ambient pressure (or critical pressure) data points can have outsize effects on the fitted parameters for both the Birch-Murnaghan and empirical equations of state. Care should be taken with this point.
+As different equations of state are used for the principal axis and volume fits, they should not be expected to produce self-consistent results. Other equations of state are of course in use and may be more appropriate for some materials.</li>
+</ul>
+<h2 id="strain-calculation">Strain calculation<a class="headerlink" href="#strain-calculation" title="Permanent link">&para;</a></h2>
+<p>PASCal calculates finite Lagrangian strains by default. Options to use finite and/or Lagrangian strains are provided. PASCal also uses a numerical approach that means the strains calculated are effectively averages of both direction and magnitude. It assigns the strain to the axes by comparing the eigenvectors to the first data point, however this approach can fail where there is significant eigenvector rotation or very noisy data. Fitting of the calculated strains outside of PASCal and manually assigning the strains to the appropriate axes is currently the best approach for these kinds of systems. The directions of the principal axes are taken, like the expansivities, from the median data point.</p>
+<h2 id="offline-installation">Offline Installation<a class="headerlink" href="#offline-installation" title="Permanent link">&para;</a></h2>
+<p>PASCal can be also run offline using a browser as a GUI. This requires NumPy, Plotly and Flask. Full requirements (with versions) available in <code>pyproject.toml</code>.
+Once you have cloned or downloaded this repository, use <code>pip</code> to install <code>poetry</code> (ideally into a virtual environment of your choice), and then use <code>poetry</code> to install the app, by running, for example:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:MJCliffe/PASCal
+<span class="nb">cd</span><span class="w"> </span>PASCal
+pip<span class="w"> </span>install<span class="w"> </span>poetry
+poetry<span class="w"> </span>install
+</code></pre></div>
+<p>You can then launch the app with <code>flask --app src/PASCal/app.py run</code> and access the app in your browser at <a href="http://localhost:5000">http://localhost:5000</a> (by default).
+The software has been designed to run as a web app, but please do submit any issues to the <a href="CONTRIBUTING/">GitHub Repository</a>.</p>
+<h2 id="issues-and-feature-requests">Issues and Feature Requests<a class="headerlink" href="#issues-and-feature-requests" title="Permanent link">&para;</a></h2>
+<p>If you find any bugs in the code, errors in the documentation or have any feature requests, please do <a href="CONTRIBUTING/">contribute</a> via the GitHub Repository.</p>
+<h2 id="other-useful-software">Other Useful Software<a class="headerlink" href="#other-useful-software" title="Permanent link">&para;</a></h2>
+<p>There are a wide range of other useful programs available:</p>
+<ul>
+<li><a href="https://www.rossangel.com/">WINstrain and EOSfit</a>. WINStrain provides a large number of different options for
+calculating strains from lattice parameters, but is no longer supported. EOSfit is a powerful tool for  fitting equations of state (principally pressure).</li>
+<li><a href="https://www.cryst.ehu.es/cryst/strain.html">STRAIN</a>. The Bilbao Crystallographic Server can calculate strain calculations for a single pair of lattice parameters.</li>
+<li><a href="https://progs.coudert.name/elate">ELATE</a>. A tool for analysing full elastic constant tensors.</li>
+</ul>
+<p>If you know of any other useful software that should be added to the list or have any other questions,
+please email matthew[dot]cliffe[at]nottingham[dot]ac[dot]uk</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
